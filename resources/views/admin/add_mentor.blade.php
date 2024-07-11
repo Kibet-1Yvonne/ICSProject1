@@ -83,12 +83,12 @@
             <label>Specialization</label>
             <select name="specialization" style="color:black; width:200px;" required>
               <option>--Select--</option>
-              <option value="Rehabilitation Counselors">Rehabilitation Counselor</option>
-              <option value="Art Therapists">Art Therapist</option>
-              <option value="Psychologists">Psychologist</option>
-              <option value="Psychiatrists">Psychiatrist</option>
-              <option value="Music Therapists">Music Therapist</option>
-              <option value="Family Therapists">Family Therapist</option>
+              <option value="Rehabilitation Counselor">Rehabilitation Counselor</option>
+              <option value="Art Therapist">Art Therapist</option>
+              <option value="Psychologist">Psychologist</option>
+              <option value="Psychiatrist">Psychiatrist</option>
+              <option value="Music Therapist">Music Therapist</option>
+              <option value="Family Therapist">Family Therapist</option>
             </select>
         </div>
 
