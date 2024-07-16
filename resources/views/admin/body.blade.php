@@ -27,7 +27,6 @@
         /* Welcome Message Styles */
         .welcome-message {
             text-align: center;
-         
             color: #fff;
             padding: 20px;
             border-radius: 10px;
