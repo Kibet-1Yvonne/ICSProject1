@@ -30,7 +30,7 @@
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
           <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
-          <a href="#" class="footer-link">(+254) 756-789-068</a>
+          <a href="#" class="footer-link">+254 783726463</a>
           <a href="#" class="footer-link">nurturinglives@gmail.com</a>
 
           <h5 class="mt-3">Social Media</h5>
