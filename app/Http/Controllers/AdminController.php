@@ -336,11 +336,5 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Post rejected');
 
     }
-
-    public function chart(){
-
-        return view('admin.chart');
-
-    }
     
 }

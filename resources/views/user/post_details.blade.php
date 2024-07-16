@@ -34,17 +34,14 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +254 758530302</a>
+              <a href="tel:+254783726463"><span class="mai-call text-primary"></span> +254 783726463</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> nurturinglives@gmail.com</a>
+              <a href="mailto:example@example.com"><span class="mai-mail text-primary"></span> nurturinglives@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
-              <a href="#"><span class="mai-logo-facebook-f"></span></a>
-              <a href="#"><span class="mai-logo-twitter"></span></a>
-              <a href="#"><span class="mai-logo-dribbble"></span></a>
-              <a href="#"><span class="mai-logo-instagram"></span></a>
+            <a href="https://github.com/Kibet-1Yvonne/ICSProject1.git"><span class="mai-logo-github"></span></a>
             </div>
           </div>
         </div> <!-- .row -->

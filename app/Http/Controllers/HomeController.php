@@ -15,6 +15,12 @@ class HomeController extends Controller
     public function redirect()
     {
 
+        $user = User::where('usertype','0')->get()->count();
+
+        $appointments = Appointment::all()->count();
+
+        $mentor = Mentor::all()->count();
+
         if(Auth::id())
         {
 
@@ -28,7 +34,7 @@ class HomeController extends Controller
             }
 
             else{
-                return view('admin.home');
+                return view('admin.home', compact('user','appointments','mentor'));
             }
         }
 

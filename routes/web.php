@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\Post;
+use App\Http\Controllers\ThemeController;
 
 
 Route::get('/',[HomeController::class,'index']);
@@ -85,5 +86,3 @@ Route::get('/about',[HomeController::class,'about']);
 Route::get('/contact',[HomeController::class,'contact']);
 
 Route::post('/submit_contact_form', [ContactFormController::class, 'store'])->name('contact.store');
-
-Route::get('/chart',[AdminController::class,'chart']);
