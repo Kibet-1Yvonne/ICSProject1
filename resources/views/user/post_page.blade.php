@@ -104,14 +104,14 @@
               <a class="nav-link" href="{{url('about')}}">About Us</a>
             </li>
 
-            <li>
-              <a class="nav-link" href="{{url('survey')}}">Survey</a>
-            </li>
-
+            
 
             @if(Route::has('login'))
 
             @auth
+            <li>
+              <a class="nav-link" href="{{url('survey')}}">Survey</a>
+            </li>
 
             <li class="nav-item">
               <a class="nav-link" href="{{url('myappointment')}}">My Appointment</a>
