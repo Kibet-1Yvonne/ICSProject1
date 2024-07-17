@@ -11,9 +11,22 @@
     <title>Survey</title>
     <style>
 
-        .containers {
-            width: 80%;
-            max-width: 800px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+         header {
+            flex-shrink: 0;
+        }
+
+        .survey-form {
+            width: 100%;
             margin: 50px auto;
             background-color: #ffffff;
             padding: 20px;
@@ -70,6 +83,7 @@
         .field_deg{
             text-align:center;
         }
+        
     </style>
     <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -139,14 +153,14 @@
                 <a class="nav-link" href="{{url('about')}}">About Us</a>
               </li>
 
+
+            @if(Route::has('login'))
+
+              @auth
+
               <li>
                 <a class="nav-link" href="{{url('survey')}}">Survey</a>
               </li>
-
-
-
-            @if(Route::has('login'))
-              @auth
 
               <li class="nav-item">
                 <a class="nav-link" href="{{url('myappointment')}}">My Appointment</a>
@@ -205,9 +219,9 @@
     </div>
     @endif
 
-    <div class="containers">
+    <div class="survey-form">
         <h1>Survey</h1>
-        <form action="{{url('survey')}}" method="post">
+        <form action="{{url('submit-survey')}}" method="post">
             @csrf
             <div class="Questions">
                 <label for="q1">Question 1: How often do you feel anxious?</label><br>
@@ -398,16 +412,15 @@
                         <label for="q12_option1">Rarely</label>
                     </div>
                     <div class="option">
+                        <input type="radio" id="q12_option2" name="q12" value="Sometimes">
+                        <label for="q12_option2">Sometimes</label>
+                    <div class="option">
                         <input type="radio" id="q12_option2" name="q12" value="Often">
                         <label for="q12_option2">Often</label>
                     </div>
                     <div class="option">
                         <input type="radio" id="q12_option3" name="q12" value="Always">
                         <label for="q12_option3">Always</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" id="q12_option4" name="q12" value="Sometimes">
-                        <label for="q12_option4">Sometimes</label>
                     </div>
                 </div>
                 <label for="q13">Question 13: Would you be interested in receiving more education or training on mental health topics?</label><br>
@@ -457,16 +470,16 @@
                 <label for="q16">Question 16: How likely are you to recommend mental health resources or support to someone in need??</label><br>
                 <div class="options">
                     <div class="option">
-                        <input type="radio" id="q16_option1" name="q16" value="Yes">
-                        <label for="q16_option1">Yes</label>
+                        <input type="radio" id="q16_option1" name="q16" value="Very Likely">
+                        <label for="q16_option1">Very Likely</label>
                     </div>
                     <div class="option">
-                        <input type="radio" id="q16_option2" name="q16" value="No">
-                        <label for="q16_option2">No</label>
+                        <input type="radio" id="q16_option2" name="q16" value="Likely">
+                        <label for="q16_option2">Likely</label>
                     </div>
                     <div class="option">
-                        <input type="radio" id="q12_option4" name="q12" value="Sometimes">
-                        <label for="q12_option4">Sometimes</label>
+                        <input type="radio" id="q12_option4" name="q12" value="Unlikely">
+                        <label for="q12_option4">Unlikely</label>
                     </div>
                 </div>
             </div>
@@ -475,9 +488,22 @@
             <div class="field_deg">
                 <input type="submit" value="Submit Survey" class="btn btn-success">
             </div>
-            
-           
         </form>
     </div>
+
+    @include('user.footer')
+
+    
+
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <script src="../assets/vendor/wow/wow.min.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
+
 </body>
 </html>

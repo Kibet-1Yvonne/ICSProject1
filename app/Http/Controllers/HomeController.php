@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Mentor;
 use App\Models\Appointment;
 use App\Models\Post;
+use App\Models\SurveyResponse;
 use Alert;
 
 class HomeController extends Controller
@@ -264,6 +265,31 @@ class HomeController extends Controller
         return view('user.survey');
 
     }
+    public function submitSurvey(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'q1' => 'required|string',
+            'q2' => 'required|string',
+            'q3' => 'required|string',
+            'q4' => 'required|string',
+            'q5' => 'required|string',
+            'q6' => 'required|string',
+            'q7' => 'required|string',
+            'q8' => 'required|string',
+            'q9' => 'required|string',
+            'q10' => 'required|string',
+            'q11' => 'required|string',
+            'q12' => 'required|string',
+            'q13' => 'required|string',
+            'q14' => 'required|string',
+            'q15' => 'required|string',
+            'q16' => 'required|string',
+        ]);
+
+        SurveyResponse::create($validatedData);
 
 
+        return redirect()->back()->with('message', 'Survey submitted successfully!');
+}
 }

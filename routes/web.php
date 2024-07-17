@@ -87,3 +87,5 @@ Route::get('/contact',[HomeController::class,'contact']);
 Route::post('/submit_contact_form', [ContactFormController::class, 'store'])->name('contact.store');
 
 Route::get('/survey',[HomeController::class,'survey']);
+
+Route::post('/submit-survey',[HomeController::class,'submitSurvey']);

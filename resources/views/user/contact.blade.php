@@ -168,10 +168,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('contact')}}">Contact</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="{{url('chatify')}}">Chat</a>
                     </li>
 
@@ -179,20 +175,27 @@
                         <a class="nav-link" href="{{url('about')}}">About Us</a>
                     </li>
 
-                    <li>
-                        <a class="nav-link" href="{{url('survey')}}">Survey</a>
-                    </li>
+                   
 
 
 
                     @if(Route::has('login'))
 
                     @auth
+                    <li>
+                <a class="nav-link" href="{{url('survey')}}">Survey</a>
+              </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('myappointment')}}">My Appointment</a>
                     </li>
+                        <li class="nav-item">
+                         <a class="nav-link" href="{{url('my_post')}}">My Posts</a>
+                     </li>
 
+              <li>
+                <a class="nav-link" href="{{url('create_post')}}">Create Post</a>
+              </li>
                 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
