@@ -87,7 +87,7 @@
           <img style="height:50px; width:50px;" src="admin/assets/images/logo.jpg">
         </a>
 
-        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">Nurtuing</span>-Lives</a>
+        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">Nurturing</span>-Lives</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -105,6 +105,14 @@
 
             <li class="nav-item">
               <a class="nav-link" href="{{url('chatify')}}">Chat</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('about')}}">About Us</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="{{url('survey')}}">Survey</a>
             </li>
 
             @if(Route::has('login'))

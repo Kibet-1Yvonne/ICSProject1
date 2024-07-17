@@ -259,5 +259,11 @@ class HomeController extends Controller
 
     }
 
+    public function survey() {
+
+        return view('user.survey');
+
+    }
+
 
 }
